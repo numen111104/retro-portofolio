@@ -1,309 +1,93 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Retro Website</title>
-    <link rel="stylesheet" href="./styles.css" />
-    <!-- Font Awesome untuk icon -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    />
-  </head>
-  <body>
-    <!-- Layout Utama -->
-    <div class="container">
-      <!-- Navbar -->
-      <header class="navbar">
-        <div class="browser-bar">
-          <div class="browser-controls">
-            <div class="control yellow"></div>
-            <div class="control green"></div>
-            <div class="control red"></div>
-          </div>
+<html lang="id">
 
-          <div class="address-bar">
-            <span>www.numenportofolio.com</span>
-          </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portofolio Workshop Kilat</title>
+  <!-- BLOK 1: LINK CSS EKSTERNAL -->
+  <link rel="stylesheet" href="styles.css" />
+  <!-- Link Font Awesome (Icon) untuk keperluan workshop -->
+</head>
 
-          <div class="window-controls">
-            <button class="window-btn">_</button>
-            <button class="window-btn">□</button>
-            <button class="window-btn">×</button>
-          </div>
-        </div>
+<body>
+  <!-- Container Utama -->
+  <div class="container">
 
-        <nav class="nav-menu">
-          <ul>
-            <li class="active">
-              <a href="#home">
-                <i class="fas fa-home"></i>
-                <span>Home</span>
-              </a>
-            </li>
-            <li>
-              <a href="#about">
-                <i class="fas fa-user"></i>
-                <span>About</span>
-              </a>
-            </li>
-            <li>
-              <a href="#projects">
-                <i class="fas fa-folder"></i>
-                <span>Projects</span>
-              </a>
-            </li>
-            <li>
-              <a href="#contact">
-                <i class="fas fa-envelope"></i>
-                <span>Contact</span>
-              </a>
-            </li>
-          </ul>
-        </nav>
-      </header>
+    <!-- BLOK 2: WINDOW BAR (Header - Identitas Website) -->
+    <header class="window-bar">
+      <div class="controls">
+        <div class="control yellow"></div>
+        <div class="control green"></div>
+      </div>
+      <div class="address-bar">
+        <span>Portofolio::Numen::Workshop</span>
+      </div>
+    </header>
 
-      <!-- Konten Utama -->
-      <main class="content">
-        <div class="profile-card-container">
-          <!-- Profile Card Kiri -->
-          <div class="profile-card">
-            <div class="card-inner">
-              <!-- Bagian Depan Kartu -->
-              <div class="card-front teal">
-                <div class="card-header">
-                  <div class="browser-controls">
-                    <div class="control yellow"></div>
-                    <div class="control green"></div>
-                    <div class="control red"></div>
-                  </div>
-                  <div class="card-title">Profile</div>
-                  <div class="window-controls">
-                    <button class="window-btn">×</button>
-                  </div>
-                </div>
-                <div class="card-content">
-                  <img
-                    class="profile-image"
-                    src="https://avatars.githubusercontent.com/u/101313967?v=4"
-                    alt=""
-                  />
-                  <h3>Bekerja Sebagai</h3>
-                  <p>Fullstack Developer</p>
-                  <p>IDN Boarding School</p>
-                  <div class="flip-hint">(Click to flip)</div>
-                </div>
-              </div>
-
-              <!-- Bagian Belakang Kartu -->
-              <div class="card-back teal">
-                <div class="card-header">
-                  <div class="browser-controls">
-                    <div class="control yellow"></div>
-                    <div class="control green"></div>
-                    <div class="control red"></div>
-                  </div>
-                  <div class="card-title">Skills</div>
-                  <div class="window-controls">
-                    <button class="window-btn">×</button>
-                  </div>
-                </div>
-                <div class="card-content">
-                  <h3>Tech Stacks</h3>
-                  <ul class="skill-list">
-                    <li>
-                      <div class="bullet"></div>
-                      Tailwind CSS
-                    </li>
-                    <li>
-                      <div class="bullet"></div>
-                      Livewire
-                    </li>
-                    <li>
-                      <div class="bullet"></div>
-                      Laravel
-                    </li>
-                    <li>
-                      <div class="bullet"></div>
-                      Alpine.js
-                    </li>
-                    <li>
-                      <div class="bullet"></div>
-                      MySql
-                    </li>
-                  </ul>
-                  <div class="flip-hint">(Click to flip back)</div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Konten Tengah -->
-          <div class="main-content">
-            <div class="window">
-              <div class="card-header">
-                <div class="browser-controls">
-                  <div class="control yellow"></div>
-                  <div class="control green"></div>
-                  <div class="control red"></div>
-                </div>
-                <div class="card-title">Welcome</div>
-                <div class="window-controls">
-                  <button class="window-btn">×</button>
-                </div>
-              </div>
-
-              <div class="window-content">
-                <div class="text-center">
-                  <h1>Portofolio Website</h1>
-                  <p>Dengan nuansa retro dan modern</p>
-                </div>
-
-                <section class="content-section">
-                  <h2 class="section-title yellow-bg">Tentang Saya</h2>
-                  <p>
-                    Selamat datang di situs web saya yang terinspirasi retro!
-                    Saya seorang pengembang yang suka membuat pengalaman web
-                    unik yang menggabungkan nostalgia dengan fungsionalitas
-                    modern.
-                  </p>
-                </section>
-
-                <section class="content-section">
-                  <h2 class="section-title teal-bg">Projek-Projek</h2>
-                  <div class="projects-grid">
-                    <div class="project-card">
-                      <img
-                        src="./projects/pmb_idn.png"
-                        alt="PMB IDN"
-                        class="project-image"
-                      />
-                      <h3>PMB IDN</h3>
-                      <p>
-                        Web Sistem Untuk Penerimaan Mahasiswa Baru Politeknik
-                        IDN Bogor
-                      </p>
-                    </div>
-                    <div class="project-card">
-                      <img
-                        class="project-image"
-                        src="./projects/e-employee.PNG"
-                        alt="E-Employee IDN"
-                      />
-                      <h3>E-Employee IDN</h3>
-                      <p>
-                        Web Sistem untuk mengelola karyawan di IDN Boarding
-                        School
-                      </p>
-                    </div>
-                  </div>
-                </section>
-
-                <section class="content-section">
-                  <h2 class="section-title pink-bg">Kontak</h2>
-                  <div class="contact-info">
-                    <div class="contact-item">
-                      <div class="contact-bullet teal-bg"></div>
-                      <span>numannasyarmz11@gmail.com</span>
-                    </div>
-                    <div class="contact-item">
-                      <div class="contact-bullet yellow-bg"></div>
-                      <span>Nu'man Nasyar MZ</span>
-                    </div>
-                  </div>
-                </section>
-              </div>
-            </div>
-          </div>
-
-          <!-- Profile Card Kanan -->
-          <div class="profile-card">
-            <div class="card-inner">
-              <!-- Bagian Depan Kartu -->
-              <div class="card-front yellow">
-                <div class="card-header">
-                  <div class="browser-controls">
-                    <div class="control yellow"></div>
-                    <div class="control green"></div>
-                    <div class="control red"></div>
-                  </div>
-                  <div class="card-title">Sosmed</div>
-                  <div class="window-controls">
-                    <button class="window-btn">×</button>
-                  </div>
-                </div>
-                <div class="card-content">
-                  <img
-                    class="profile-image"
-                    src="https://github.githubassets.com/assets/GitHub-Mark-ea2971cee799.png"
-                    alt="Github Logo"
-                  />
-                  <h3>Sosial Media</h3>
-                  <p>Get in touch</p>
-                  <div class="flip-hint">(Click to flip)</div>
-                </div>
-              </div>
-
-              <!-- Bagian Belakang Kartu -->
-              <div class="card-back yellow">
-                <div class="card-header">
-                  <div class="browser-controls">
-                    <div class="control yellow"></div>
-                    <div class="control green"></div>
-                    <div class="control red"></div>
-                  </div>
-                  <div class="card-title">Links</div>
-                  <div class="window-controls">
-                    <button class="window-btn">×</button>
-                  </div>
-                </div>
-                <div class="card-content">
-                  <h3>Links</h3>
-                  <ul class="skill-list">
-                    <li>
-                      <div class="bullet"></div>
-                      GitHub
-                    </li>
-                    <li>
-                      <div class="bullet"></div>
-                      LinkedIn
-                    </li>
-                    <li>
-                      <div class="bullet"></div>
-                      Twitter
-                    </li>
-                    <li>
-                      <div class="bullet"></div>
-                      Email
-                    </li>
-                  </ul>
-                  <div class="flip-hint">(Click to flip back)</div>
-                </div>
-              </div>
-            </div>
+    <!-- SECTION 1: HERO & PROFILE (Perkenalan Diri dan Skills) -->
+    <section class="hero-section" id="hero">
+      <div class="profile-info">
+        <!-- Tempat Foto/Avatar Diri -->
+        <img src="./projects/ikhwan-2.png" alt="" class="profile-image">
+        <div class="text-content">
+          <h1>Halo, Saya Numan</h1>
+          <p>
+            Seorang Fullstack Developer di IDN Boarding School. Saya bersemangat membangun aplikasi web unik yang
+            menggabungkan fungsionalitas modern dengan desain yang menarik.
+          </p>
+          <!-- Daftar Skill (Langsung diisi 5 contoh) -->
+          <div class="skill-list">
+            <li>Laravel</li>
+            <li>Livewire</li>
+            <li>Tailwind CSS</li>
+            <li>MySQL</li>
+            <li>Alpine.js</li>
           </div>
         </div>
-      </main>
-    </div>
+      </div>
+    </section>
 
-    <script>
-      // JavaScript sederhana untuk flip card
-      document.querySelectorAll(".profile-card").forEach((card) => {
-        card.addEventListener("click", function () {
-          this.querySelector(".card-inner").classList.toggle("is-flipped");
-        });
-      });
+    <!-- SECTION 2: PROJECTS SHOWCASE (Daftar Projek Terbaik) -->
+    <section class="showcase-section" id="projects">
+      <h2 class="section-title">SHOWCASE PROJECTS</h2>
+      <div class="projects-grid">
 
-      // JavaScript untuk navigasi
-      document.querySelectorAll(".nav-menu li").forEach((item) => {
-        item.addEventListener("click", function () {
-          document.querySelectorAll(".nav-menu li").forEach((i) => {
-            i.classList.remove("active");
-          });
-          this.classList.add("active");
-        });
-      });
-    </script>
-  </body>
+        <!-- Projek 1: Contoh Sederhana -->
+        <div class="project-card">
+          <!-- Placeholder Gambar Projek -->
+          <div class="project-image-placeholder">
+            <i class="fas fa-desktop"></i> Website E-Employee
+          </div>
+          <h3>E-Employee IDN</h3>
+          <p>
+            Sistem manajemen karyawan internal berbasis web untuk mengelola data kehadiran, cuti, dan informasi staf di
+            IDN Boarding School.
+          </p>
+          <a href="#link_demo_1" target="_blank">Lihat Demo <i class="fas fa-external-link-alt"></i></a>
+        </div>
+
+        <!-- Projek 2: Contoh Sederhana -->
+        <div class="project-card">
+          <div class="project-image-placeholder">
+            <i class="fas fa-graduation-cap"></i> PMB Online
+          </div>
+          <h3>PMB Politeknik IDN</h3>
+          <p>
+            Platform penerimaan mahasiswa baru online yang terintegrasi dengan sistem pembayaran dan pendaftaran, dibuat
+            dengan Laravel. 
+          </p>
+          <a href="#link_demo_2" target="_blank">Lihat Demo <i class="fas fa-external-link-alt"></i></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER: Kontak dan Hak Cipta -->
+    <footer class="footer-contact">
+      <p style="margin-top: 15px; font-size: 0.9em;">© 2024 Portofolio Workshop Kilat | Nu'man Nasyar MZ</p>
+    </footer>
+
+  </div>
+</body>
+
 </html>

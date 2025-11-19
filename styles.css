@@ -1,4 +1,6 @@
-/* Reset dan Base Styles */
+/* ======================================= */
+/* BLOK 1: RESET & TEMA DASAR (10 MENIT)   */
+/* ======================================= */
 * {
   margin: 0;
   padding: 0;
@@ -6,12 +8,21 @@
   font-family: "Courier New", Courier, monospace;
 }
 
-body {
-  background-color: #f9f7e8;
-  position: relative;
+/* Variabel CSS untuk kemudahan ganti tema */
+:root {
+  --color-bg: #f9f7e8; /* Kertas Lama */
+  --color-secondary: #ff6b6b; /* Merah (Pink) */
+  --color-primary: #4ecdc4; /* Teal */
+  --color-accent: #ffd166; /* Kuning */
+  --color-border: black;
+  --shadow-retro: 4px 4px 0px 0px var(--color-border);
 }
 
-/* Grid Background */
+body {
+  background-color: var(--color-bg);
+}
+
+/* Efek Grid/Kertas Grafis */
 body::before {
   content: "";
   position: fixed;
@@ -25,355 +36,225 @@ body::before {
   z-index: -1;
 }
 
-/* Container */
 .container {
+  max-width: 1000px;
   margin: 0 auto;
   padding: 20px;
 }
 
-/* Navbar Styles */
-.navbar {
-  position: sticky;
-  top: 0;
-  z-index: 100;
-}
-
-.browser-bar {
-  background-color: #ff6b6b;
-  border: 2px solid black;
-  border-bottom: none;
+/* ======================================= */
+/* BLOK 2: WINDOW BAR (15 MENIT)           */
+/* ======================================= */
+.window-bar {
+  background-color: var(--color-primary);
+  border: 2px solid var(--color-border);
   border-radius: 8px 8px 0 0;
   padding: 8px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  box-shadow: 4px 4px 0px 0px rgba(0, 0, 0, 1);
+  box-shadow: var(--shadow-retro);
+  position: sticky;
+  top: 0;
+  z-index: 10;
 }
 
-.browser-controls {
+.controls {
   display: flex;
   gap: 8px;
 }
-
 .control {
   width: 12px;
   height: 12px;
   border-radius: 50%;
-  border: 1px solid black;
+  border: 1px solid var(--color-border);
 }
-
-.yellow {
-  background-color: #ffd166;
+.control.yellow {
+  background-color: var(--color-accent);
 }
-
-.green {
-  background-color: #4ecdc4;
-}
-
-.red {
-  background-color: #ff6b6b;
+.control.green {
+  background-color: var(--color-secondary);
 }
 
 .address-bar {
-  flex: 1;
+  flex-grow: 1;
   margin: 0 16px;
   background-color: white;
-  border: 2px solid black;
+  border: 2px solid var(--color-border);
   border-radius: 4px;
   padding: 4px 8px;
-}
-
-.address-bar span {
-  color: #666;
   font-size: 14px;
 }
 
-.window-controls {
-  display: flex;
-  gap: 4px;
-}
-
-.window-btn {
-  width: 24px;
-  height: 24px;
+/* ======================================= */
+/* BLOK 3: SECTION 1: HERO & PROFILE (25 MENIT)*/
+/* ======================================= */
+.hero-section {
   background-color: white;
-  border: 1px solid black;
-  border-radius: 4px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 12px;
-  cursor: pointer;
-}
-
-.nav-menu {
-  background-color: #4ecdc4;
-  padding: 8px;
-  border: 2px solid black;
-  border-top: none;
-  border-radius: 0 0 8px 8px;
-  box-shadow: 4px 4px 0px 0px rgba(0, 0, 0, 1);
-}
-
-.nav-menu ul {
-  display: flex;
-  justify-content: center;
-  gap: 16px;
-  list-style: none;
-}
-
-.nav-menu li {
-  cursor: pointer;
-}
-
-.nav-menu li a {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 8px;
-  border-radius: 6px;
-  text-decoration: none;
-  color: black;
-  transition: background-color 0.3s;
-}
-
-.nav-menu li.active a {
-  background-color: white;
-  border: 2px solid black;
-  box-shadow: 2px 2px 0px 0px rgba(0, 0, 0, 1);
-}
-
-.nav-menu li:not(.active) a:hover {
-  background-color: rgba(255, 255, 255, 0.3);
-}
-
-.nav-menu li a span {
-  font-size: 12px;
-  font-weight: bold;
-  margin-top: 4px;
-}
-
-/* Content Styles */
-.content {
+  border: 2px solid var(--color-border);
+  box-shadow: var(--shadow-retro);
+  padding: 30px;
   margin-top: 32px;
-}
-
-.profile-card-container {
   display: flex;
-  flex-wrap: wrap;
-  gap: 24px;
-  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
 }
 
-/* Profile Card Styles */
-.profile-card {
-  width: 100%;
-  height: 350px;
-  perspective: 1000px;
-  cursor: pointer;
-}
-
-.card-inner {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  transition: transform 0.6s;
-  transform-style: preserve-3d;
-}
-
-.card-inner.is-flipped {
-  transform: rotateY(180deg);
-}
-
-.card-front,
-.card-back {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  backface-visibility: hidden;
-  border: 2px solid black;
-  border-radius: 8px;
-  box-shadow: 4px 4px 0px 0px rgba(0, 0, 0, 1);
-  overflow: hidden;
-}
-
-.card-back {
-  transform: rotateY(180deg);
-}
-
-.teal {
-  background-color: #4ecdc4;
-}
-
-.yellow {
-  background-color: #ffd166;
-}
-
-.pink-bg {
-  background-color: #ff6b6b;
-}
-
-.card-header {
-  padding: 8px;
-  border-bottom: 2px solid black;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.card-title {
-  font-size: 14px;
-  font-weight: bold;
-}
-
-.card-content {
-  height: calc(100% - 40px);
-  padding: 16px;
-  background-color: white;
+.profile-info {
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: center;
 }
 
 .profile-image {
-  width: 96px;
-  height: 96px;
+  width: 120px;
+  height: 120px;
   border-radius: 50%;
-  background-color: #ddd;
-  border: 2px solid black;
-  margin-bottom: 16px;
+  background-color: var(--color-secondary);
+  border: 3px solid var(--color-border);
+  margin-bottom: 15px;
+  box-shadow: 2px 2px 0px 0px var(--color-border);
+  /* Placeholder untuk gambar */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  font-weight: bold;
 }
 
-.flip-hint {
-  margin-top: 16px;
-  font-size: 12px;
-  color: #777;
+.hero-content h1 {
+  font-size: 2.5em;
+  color: var(--color-primary);
+  margin-bottom: 10px;
+  display: inline-block;
+  border-bottom: 3px solid var(--color-accent);
+}
+
+.hero-content p {
+  max-width: 600px;
+  margin: 0 auto 20px auto;
+  line-height: 1.5;
 }
 
 .skill-list {
-  width: 100%;
+  margin: 1rem 0;
   list-style: none;
-  margin-top: 16px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
 }
 
 .skill-list li {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  margin-bottom: 8px;
+  background-color: var(--color-accent);
+  border: 1px solid var(--color-border);
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-weight: bold;
+  box-shadow: 1px 1px 0px 0px var(--color-border);
 }
 
-.bullet {
-  width: 12px;
-  height: 12px;
-  background-color: #ffd166;
-  border: 1px solid black;
-}
-
-/* Main Content Styles */
-.main-content {
-  flex: 1;
-  min-width: 300px;
-}
-
-.window {
-  border: 2px solid black;
-  border-radius: 8px;
-  box-shadow: 4px 4px 0px 0px rgba(0, 0, 0, 1);
-  overflow: hidden;
-  background-color: white;
-}
-
-.window-content {
-  padding: 16px;
-}
-
-.text-center {
-  text-align: center;
-  margin-bottom: 24px;
-}
-
-.content-section {
-  margin-bottom: 24px;
+/* ======================================= */
+/* BLOK 4: SECTION 2: PROJECT SHOWCASE (45 MENIT)*/
+/* ======================================= */
+.showcase-section {
+  margin-top: 40px;
 }
 
 .section-title {
-  display: inline-block;
-  font-size: 24px;
+  font-size: 2em;
   font-weight: bold;
-  margin-bottom: 12px;
-  padding: 0 8px;
-  border: 1px solid black;
-}
-
-.yellow-bg {
-  background-color: #ffd166;
-}
-
-.teal-bg {
-  background-color: #4ecdc4;
+  margin-bottom: 20px;
+  color: var(--color-primary);
+  border-bottom: 3px solid var(--color-secondary);
+  padding-bottom: 5px;
 }
 
 .projects-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 16px;
+  grid-template-columns: 1fr; /* Mobile Default */
+  gap: 25px;
 }
 
 .project-card {
-  border: 2px solid black;
-  padding: 12px;
-  background-color: #f9f7e8;
+  background-color: white;
+  border: 2px solid var(--color-border);
+  box-shadow: var(--shadow-retro);
+  padding: 20px;
+  transition: transform 0.2s, box-shadow 0.2s;
 }
 
-.project-image {
-  height: 180px;
-  border: 1px solid black;
-  margin-bottom: 8px;
+/* Hover Effect untuk menarik perhatian */
+.project-card:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0px 0px var(--color-primary);
+}
+
+.project-card h3 {
+  margin-top: 10px;
+  font-size: 1.5em;
+  color: var(--color-secondary);
+}
+
+.project-image-placeholder {
   width: 100%;
-}
-
-.contact-info {
-  border: 2px solid black;
-  padding: 16px;
-  background-color: #f9f7e8;
-}
-
-.contact-item {
+  height: 200px;
+  background-color: #ddd;
+  border: 1px dashed var(--color-border);
+  margin-bottom: 10px;
   display: flex;
+  justify-content: center;
   align-items: center;
-  gap: 8px;
-  margin-bottom: 8px;
+  font-size: 18px;
+  color: #555;
 }
 
-.contact-bullet {
-  width: 16px;
-  height: 16px;
-  border: 1px solid black;
+.project-card a {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 8px 15px;
+  background-color: var(--color-primary);
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  border: 1px solid var(--color-border);
+  box-shadow: 2px 2px 0px 0px var(--color-border);
 }
 
-/* Responsive Styles */
+.project-card a:hover {
+  background-color: #ff8e8e;
+}
+
+/* ======================================= */
+/* BLOK 5: RESPONSIVITAS & FOOTER (5 MENIT)*/
+/* ======================================= */
 @media (min-width: 768px) {
-  .profile-card {
-    width: 24%;
+  .projects-grid {
+    grid-template-columns: 1fr 1fr; /* 2 Kolom di desktop */
   }
 
-  .main-content {
-    width: 48%;
+  .profile-info {
+    flex-direction: row;
+    text-align: left;
+    gap: 30px;
+  }
+
+  .profile-info .text-content {
+    flex: 1;
   }
 }
 
-@media (max-width: 767px) {
-  .profile-card-container {
-    flex-direction: column;
-  }
+.footer-contact {
+  margin-top: 40px;
+  text-align: center;
+  padding: 20px;
+  border-top: 2px solid var(--color-border);
+}
 
-  .profile-card,
-  .main-content {
-    width: 100%;
-  }
-
-  .projects-grid {
-    grid-template-columns: 1fr;
-  }
+.footer-contact a {
+  color: var(--color-primary);
+  margin: 0 10px;
+  font-size: 1.5em;
+  text-decoration: none;
 }
