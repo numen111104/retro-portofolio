@@ -1,14 +1,17 @@
-# Retro Portfolio 🕹️  
+# Retro Portfolio 
 
-**Proyek Retro Portfolio** adalah template portofolio siap pakai dengan gaya retro, dibuat khusus untuk peserta bootcamp **VS Code by Numen**.  
-*Template ini sudah 100% jadi — tinggal diunduh dan disesuaikan!*  
+**Proyek Retro Portfolio** adalah template portofolio siap pakai dengan gaya retro, dibuat khusus untuk peserta workshop
+
+**Template ini sudah 100% jadi — tinggal diunduh dan disesuaikan!**  
 
 ---
 
-## 🎁 Cara Mendapatkan Proyek Ini  
-### **Untuk Semua Peserta**:  
+## Cara Mendapatkan Proyek Ini  
 
-#### **Option 1: Unduh Langsung (Tanpa Git/GitHub)**  
+### Untuk Semua Peserta:  
+
+#### Option 1: Unduh Langsung (Tanpa Git/GitHub)  
+
 1. Klik tombol **`Code`** (hijau) di bagian atas repositori ini.  
 2. Pilih **`Download ZIP`**.  
 3. Ekstrak file ZIP ke folder lokal Anda.  
@@ -34,33 +37,6 @@ git clone https://github.com/numen111104/retro-portofolio.git
 
 ---
 
-## 👨‍💻 Daftar Peserta Bootcamp  
-| Nama                             |  
-|----------------------------------|  
-| Almerullah Nabil Patu            |
-| Athallah Dimas Nugarin           |
-| Daffa Aghna Hafizha              |
-| Fadhil Atha Zharif               |
-| Guevara Nuthqi Adie Artha        |
-| Hafiz                            |
-| Ihsan                            |
-| Lubna Zahroh                     |
-| Muhammad Hanifullah Al Islam     |
-| Muhammad Putra Tegar             |
-| Muhammad Rafli Alzakzaky         |
-| Naufal Syafiq Wilfa              |
-| Najla Haura Mumtazah             |
-| Rian Fikri Hafiz                 |
-| Risha Adzkia Putri               |
-| Sulthan Aziz Suwadana            |
-| Unaisah                          |
-| Windy Widyanti                   |
-| Zahraa Hartadi                   |
-| Zaahiroh                         |
-| Bunga Reswara Ovilza             |
-
----
-
 ## 💡 Tips Profesional  
 - Ganti placeholder gambar di folder `/assets` dengan foto/foto proyek Anda.  
 - Update metadata di `index.html` (judul, deskripsi, favicon) untuk SEO.  
@@ -68,9 +44,4 @@ git clone https://github.com/numen111104/retro-portofolio.git
 
 ---
 
-## 📜 Lisensi  
-Proyek ini terbuka untuk semua peserta bootcamp **VS Code by Numen** di bawah lisensi [MIT](LICENSE).  
-
----  
-
-✨ **Dibuat dengan cinta oleh Nu'man Nasyar MZ untuk para peserta bootcamp!** ✨  
+✨ **Dibuat dengan cinta oleh Nu'man Nasyar MZ untuk para peserta workshop!** ✨  
